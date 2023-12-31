@@ -7,41 +7,43 @@
 
 	const steps = [
 		{
-			name: 'Frogger',
-			icon: 'fa-solid fa-frog',
-			description:
-				'Take a shot at crossing the busy highways of Frogville in this classic, written in Python'
+			name: 'Pong Game',
+			icon: 'fa-solid fa-table-tennis-paddle-ball',
+			description: 'Try and get a high score in this all time classic!',
+			url: 'https://github.com/kdleonard93/100-Days-Of-Code_Python/tree/main/day-22'
 		},
 		{
-			name: 'Utlimate Todos',
-			icon: 'fa-solid fa-list-check',
+			name: 'Mail Merger',
+			icon: 'fa-solid fa-envelope',
 			description:
-				'Test for model robustness with customized test profiles and receive exhaustive reporting on the performance and potential vulnerabilities of your model.'
+				'Mail Merger is a Python-based tool for bulk email customization, making personalized communication simple and efficient.',
+			url: 'https://github.com/kdleonard93/100-Days-Of-Code_Python/tree/main/day-24'
 		},
 		{
 			name: 'Leo Ledger',
 			icon: 'fa-solid fa-sack-dollar',
 			description:
-				"Whether it's regular budget tracking, setting financial goals, forecasting expenses, or identifying savings opportunities, this tool aims to cover it all. (coming soon)."
+				"Whether it's regular budget tracking, setting financial goals, forecasting expenses, or identifying savings opportunities, this tool aims to cover it all. (coming soon).",
+			url: ''
 		}
 	];
 
 	const benefits = [
 		{
 			metric: '10x',
-			name: 'a self taught developer',
+			name: 'a music lover turned dev',
 			description:
-				'I taught myself to code using free online resources and absolutely fell in love with the creativity and problem solving that is involved in developing and engineering innovative new online experiences. Starting of with JavaScript, HTML & CSS and evolving my knowledge base to include JavaScript frameworks, backend programming, design, cloud services and much much more.'
+				"I got into development out of my love for music, when the tides started to turn during my journey as a Producer and Mix Engineer. I found it easier to work with the technical things of the post work and when it came to artists, it was hard to depend on the consistency of work. That led me to looking into making VSTs for music production but that soon turned into going down a rabbit hole with web development. That led me to online tutorials and projects before attending Lambda School (now Bloom Institute of Technology). From there, i entered my professional career and haven't looked back since."
 		},
 		{
-			name: 'a product design & UX fanatic',
+			name: 'a developer for Cars Commerce',
 			description:
-				'Carefully crafting and designing amazing user experiences allows me to express and experiment with every morsel of creativity I have. I love the challenge of learning new design concepts and enabling users with amazing online experiences.'
+				'As a developer at Cars Commerce, my work primarily involves PHP, JavaScript, HTML/CSS, and WordPress, complemented by projects using Svelte and Vue components. I am adept at managing tasks through Jira and using a variety of tools including Docker, AWS, and Postman.'
 		},
 		{
-			name: 'an excellent communicator',
+			name: 'an excellent communicator and constant learner',
 			description:
-				"Communication is key and it's a paramount value of mine. I believe in transparency and constructive communication above all else. This helps me develop deep relationships and ensures my effectiveness and productivity in any work space with any team."
+				'I place great emphasis on transparent and effective communication, which I believe is crucial for building strong team relationships and enhancing productivity. I am committed to continual learning and staying updated with the latest technologies, with a keen interest in finance technology and exploring new frameworks like SvelteKit and languages like TypeScript.'
 		}
 	];
 	export const Main = null;
@@ -101,8 +103,24 @@
 			{#each steps as step}
 				<Step>
 					<svelte:fragment slot="header">
-						<i class={step.icon} />
-						<h3>{step.name}</h3>
+						{#if step.icon === 'fa-solid fa-sack-dollar'}
+							<i class={`${step.icon} text-cali-gold`} />
+						{:else if step.icon === 'fa-solid fa-table-tennis-paddle-ball'}
+							<i class={`${step.icon} text-paddle-tan`} />
+						{:else}
+							<i class={`${step.icon} text-secondary-300`} />
+						{/if}
+						{#if step.url}
+							<a href={step.url} target="_blank">
+								<h3 class="hover:underline decoration-wavy duration-200">
+									{step.name}
+								</h3>
+							</a>
+						{:else}
+							<h3 class="hover:underline decoration-wavy duration-200">
+								{step.name}
+							</h3>
+						{/if}
 					</svelte:fragment>
 					<p>{step.description}</p>
 				</Step>

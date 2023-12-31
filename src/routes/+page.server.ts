@@ -4,7 +4,6 @@ import nodemailer from 'nodemailer';
 import { z } from 'zod';
 import type { RequestEvent } from '@sveltejs/kit'
 
-
 const schema = z.object({
     name: z.string().default(''),
     email: z.string().email(),
@@ -25,8 +24,8 @@ export const load = (async () => {
       if (form.valid) {
         const transporter = nodemailer.createTransport({/* SMTP settings */});
         await transporter.sendMail({
-          from: 'your-email@example.com',
-          to: 'contact@digitaldopamine.dev',
+          from: process.env.ZOHO_USER, // Sender address
+          to: 'contact@digitaldopamine.dev', // Receiver address
           subject: 'New Contact Form Submission',
           text: `Name: ${form.data.name}\nEmail: ${form.data.email}\nMessage: ${form.data.message}`
         });
@@ -39,8 +38,4 @@ export const load = (async () => {
       return { form };
     }
 }
-
-
-
-
 

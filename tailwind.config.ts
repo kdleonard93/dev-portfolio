@@ -11,6 +11,8 @@ export default {
 		extend: {
 			colors: {
 				'hashnode-blue': '#2463EB',
+				'cali-gold': '#FFC30B',
+				'paddle-tan': '#93645F'
 			}
 		},
 	},

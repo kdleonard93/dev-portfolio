@@ -4,10 +4,14 @@
 
 	export let data;
 	console.log(data.form); // Add this line for debugging
-	const { form, enhance, errors, constraints } = superForm(data.form);
+	const { form, enhance, errors, constraints } = superForm(data.form, {
+		resetForm: true
+	});
 
 	function handleSubmit() {
-		alert('Just an example 😁. Reach out through LinkedIn or Hashnode instead!');
+		alert(
+			'Just a placeholder for now 😁. Using SuperForms for server and client validation and Skeleton for styling. Contact me through LinkedIn or Hashnode instead!'
+		);
 	}
 </script>
 
