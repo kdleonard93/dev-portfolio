@@ -1,7 +1,6 @@
 <script lang="ts">
 	import '../app.postcss';
 	import '../app.css';
-	import { AppShell, AppBar } from '@skeletonlabs/skeleton';
 	import Header from '../components/Header.svelte';
 	import Footer from '../components/Footer.svelte';
 

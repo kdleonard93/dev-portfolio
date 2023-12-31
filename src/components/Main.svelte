@@ -1,12 +1,16 @@
 <script lang="ts">
-	import Step from './Step.svelte';
+	import { Stepper, Step } from '@skeletonlabs/skeleton';
+
+	function handleComplete() {
+		window.open('https://github.com/kdleonard93?tab=repositories');
+	}
 
 	const steps = [
 		{
-			name: 'Smoljames Store',
-			icon: 'fa-solid fa-cart-shopping',
+			name: 'Frogger',
+			icon: 'fa-solid fa-frog',
 			description:
-				'Smoljames Store is a a merchanising store created with Next.js, Commerce.js & Stripe! Commerce.js is a CMS for managing project and Stripe is used for all transaction handling.'
+				'Take a shot at crossing the busy highways of Frogville in this classic, written in Python'
 		},
 		{
 			name: 'Utlimate Todos',
@@ -15,10 +19,10 @@
 				'Test for model robustness with customized test profiles and receive exhaustive reporting on the performance and potential vulnerabilities of your model.'
 		},
 		{
-			name: 'Pokédex',
-			icon: 'fa-solid fa-diagram-project',
+			name: 'Leo Ledger',
+			icon: 'fa-solid fa-sack-dollar',
 			description:
-				'Augment your datasets with our filters and dataset manipulations to ensure your models are trained on the highest quality datasets (coming soon).'
+				"Whether it's regular budget tracking, setting financial goals, forecasting expenses, or identifying savings opportunities, this tool aims to cover it all. (coming soon)."
 		}
 	];
 
@@ -51,8 +55,9 @@
 				<br />Software<span class="poppins text-primary-400">Engineer</span>.
 			</h2>
 			<p class="text-base sm:text-lg md:text-xl">
-				My <span class="text-primary-400">tech arsenal</span> includes Javascript/Typescript(Sveltekit),
-				Python + Flask, PHP, Wordpress, TailwindCSS + SkeletonUI, & MongoDB or Fauna.
+				My <span class="text-primary-400">tech arsenal</span> includes Javascript/Typescript, Svelte
+				+ Sveltekit, Bun or Node.js, Python + Flask, PHP, Wordpress, TailwindCSS + SkeletonUI, & MongoDB
+				or Fauna.
 			</p>
 			<a
 				href="https://www.linkedin.com/in/kyle-leonard93/"
@@ -68,7 +73,7 @@
 		<div class="relative grid place-items-center">
 			<!-- svelte-ignore a11y-img-redundant-alt -->
 			<img
-				src={'images/profile-img.png'}
+				src="https://link.storjshare.io/raw/jwt36t75mpohzjdhvwuuvoxyo2ca/portfolio-images%2Fprofile-img.png"
 				alt="Profile Image"
 				class="object-cover z-[2] max-h-[70vh]"
 			/>
@@ -77,7 +82,7 @@
 	<section class="py-20 lg:py-32 flex flex-col gap-24" id="projects">
 		<div class="flex flex-col gap-2 text-center">
 			<h6 class="text-large sm:text-xl md:text-2xl">
-				I've been documenting my work through <span class="font-semibold text-hashnode-blue"
+				I've been documenting my journey through <span class="font-semibold text-hashnode-blue"
 					>Hashnode</span
 				>
 			</h6>
@@ -91,32 +96,18 @@
 			<i class="fa-solid fa-blog" />
 			<p>Check out my blog!</p>
 		</a>
-		<div class="grid grid-cols-1 lg:grid-cols-3 gap-12 lg:gap-10">
-			<Step step={steps[0]}>
-				<p>
-					Smoljames Store is a a merchanising store created with <strong class="text-primary-400"
-						>Next.js, Commerce.js, Stripe & Node.js + Express.js!</strong
-					> Commerce.js is a product CMS and Stripe is used for all transaction handling.
-				</p>
-			</Step>
-			<Step step={steps[1]}>
-				<p>
-					Ultimate Todos is a Full Stack <strong class="text-primary-400">Next.js</strong>,
-					<strong class="text-primary-400">Node.js + Express.js</strong>
-					& <strong class="text-primary-400">Firebase</strong> CRUD application that allows a user to
-					login, manage a tidy and efficacious todo list, and persist this information across devices.
-				</p>
-			</Step>
-			<Step step={steps[2]}>
-				<p>
-					The Pokédex is a <strong class="text-primary-400">SvelteKit & TailwindCSS</strong>
-					web application, hosted on
-					<strong class="text-primary-400">Netlify</strong>, that consumes and caches the
-					<strong class="text-primary-400">Pokémon API</strong>
-					to display all Pokémon information. Gotta catch them all!
-				</p>
-			</Step>
-		</div>
+
+		<Stepper buttonCompleteLabel="All Projects" on:complete={handleComplete} target="_blank">
+			{#each steps as step}
+				<Step>
+					<svelte:fragment slot="header">
+						<i class={step.icon} />
+						<h3>{step.name}</h3>
+					</svelte:fragment>
+					<p>{step.description}</p>
+				</Step>
+			{/each}
+		</Stepper>
 	</section>
 	<section
 		id="about"
