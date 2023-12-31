@@ -4,14 +4,14 @@ FROM node:16 AS build
 WORKDIR /app
 
 # Copy package files and install dependencies
-COPY package.json bun.lockb ./
-RUN bun install
+COPY package.json package-lock.json ./
+RUN npm install
 
 # Copy the rest of the application files
 COPY . .
 
 # Build the Svelte app
-RUN bun run build
+RUN npm run build
 
 # Step 2: Serve the built application
 # Use an Nginx image to serve the static files
