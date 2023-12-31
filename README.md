@@ -1,3 +1,5 @@
+New Dev portfolio made with Sveltkit, Tailwind + Skeleton, Superforms, Vite, and Nodemailer. Just some new tools I want to use moving forward.
+
 # create-svelte
 
 Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
