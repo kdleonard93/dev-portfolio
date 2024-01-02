@@ -16,9 +16,8 @@
 </script>
 
 <Main />
-<h3 class="font-semibold text-2xl sm:text-3xl md:text-4xl mb-2">Contact Me</h3>
+<!-- <h3 class="font-semibold text-2xl sm:text-3xl md:text-4xl mb-2">Contact Me</h3>
 <form method="POST" use:enhance>
-	<!-- Existing fields -->
 	<label class="label">
 		<span>Name</span>
 		<input
@@ -73,4 +72,4 @@
 		type="submit"
 		on:click={handleSubmit}>Submit</button
 	>
-</form>
+</form> -->
