@@ -58,8 +58,8 @@
 			</h2>
 			<p class="text-base sm:text-lg md:text-xl">
 				My <span class="text-primary-400">tech arsenal</span> includes Javascript/Typescript, Svelte
-				+ Sveltekit, Node.js, Python + Flask, PHP, Wordpress, TailwindCSS + SkeletonUI, & MongoDB or
-				CockroachDB (PostgreSQL)
+				+ Sveltekit, Node.js, Python + Django/Flask, PHP, Wordpress, TailwindCSS + SkeletonUI, & MongoDB
+				or CockroachDB (PostgreSQL)
 			</p>
 			<a
 				href="https://www.linkedin.com/in/kyle-leonard93/"
