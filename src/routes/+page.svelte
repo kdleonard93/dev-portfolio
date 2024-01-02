@@ -1,18 +1,18 @@
 <script>
 	import Main from '../components/Main.svelte';
-	import { superForm } from 'sveltekit-superforms/client';
+	// import { superForm } from 'sveltekit-superforms/client';
 
-	export let data;
-	console.log(data.form); // Add this line for debugging
-	const { form, enhance, errors, constraints } = superForm(data.form, {
-		resetForm: true
-	});
+	// export let data;
+	// console.log(data.form); // Add this line for debugging
+	// const { form, enhance, errors, constraints } = superForm(data.form, {
+	// 	resetForm: true
+	// });
 
-	function handleSubmit() {
-		alert(
-			'Just a placeholder for now 😁. Using SuperForms for server and client validation and Skeleton for styling. Contact me through LinkedIn or Hashnode instead!'
-		);
-	}
+	// function handleSubmit() {
+	// 	alert(
+	// 		'Just a placeholder for now 😁. Using SuperForms for server and client validation and Skeleton for styling. Contact me through LinkedIn or Hashnode instead!'
+	// 	);
+	// }
 </script>
 
 <Main />
