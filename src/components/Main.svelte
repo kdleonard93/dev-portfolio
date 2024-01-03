@@ -13,11 +13,11 @@
 			url: 'https://github.com/kdleonard93/100-Days-Of-Code_Python/tree/main/day-22'
 		},
 		{
-			name: 'Mail Merger',
+			name: 'Automated Email Sender',
 			icon: 'fa-solid fa-envelope',
 			description:
-				'Mail Merger is a Python-based tool for bulk email customization, making personalized communication simple and efficient.',
-			url: 'https://github.com/kdleonard93/100-Days-Of-Code_Python/tree/main/day-24'
+				'Automated Email Sender is a Python-based application designed to automate the process of sending multiple emails. The application is ideal for sending batch emails, newsletters, and alerts.',
+			url: 'https://github.com/kdleonard93/automated_email_sender'
 		},
 		{
 			name: 'Leo Ledger',
