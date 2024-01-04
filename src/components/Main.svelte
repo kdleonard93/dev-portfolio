@@ -38,7 +38,7 @@
 		{
 			name: 'a developer for Cars Commerce',
 			description:
-				'As a developer at Cars Commerce, my work primarily involves PHP, JavaScript, HTML/CSS, and WordPress, complemented by projects using Svelte and Vue components. I am adept at managing tasks through Jira and using a variety of tools including Docker, AWS, and Postman.'
+				'As a developer at Cars Commerce, my work primarily involves PHP, JavaScript, HTML/CSS, and WordPress, at times, complemented by features using Vue components. I am adept at managing tasks through Jira and using a variety of tools including Docker, AWS, and Postman.'
 		},
 		{
 			name: 'an excellent communicator and constant learner',
