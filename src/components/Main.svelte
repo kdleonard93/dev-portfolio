@@ -7,12 +7,14 @@
 
 	const steps = [
 		{
+			id: '1',
 			name: 'Pong Game',
 			icon: 'fa-solid fa-table-tennis-paddle-ball',
 			description: 'Try and get a high score in this all time classic!',
 			url: 'https://github.com/kdleonard93/100-Days-Of-Code_Python/tree/main/day-22'
 		},
 		{
+			id: '2',
 			name: 'Automated Email Sender',
 			icon: 'fa-solid fa-envelope',
 			description:
@@ -20,6 +22,15 @@
 			url: 'https://github.com/kdleonard93/automated_email_sender'
 		},
 		{
+			id: '3',
+			name: 'Film Fan',
+			icon: 'fa-solid fa-film',
+			description:
+				'Film Fan is sleek web application built using Svelte and Django, designed for movie enthusiasts. This app allows users to create personalized accounts, build, and manage their film lists with comprehensive CRUD (Create, Read, Update, Delete) functionalities.(new features to come)',
+			url: 'https://github.com/kdleonard93/film-fan'
+		},
+		{
+			id: '4',
 			name: 'Leo Ledger',
 			icon: 'fa-solid fa-sack-dollar',
 			description:
@@ -101,12 +112,14 @@
 
 		<Stepper buttonCompleteLabel="All Projects" on:complete={handleComplete} target="_blank">
 			{#each steps as step}
-				<Step>
+				<Step stepTerm="Project">
 					<svelte:fragment slot="header">
 						{#if step.icon === 'fa-solid fa-sack-dollar'}
 							<i class={`${step.icon} text-cali-gold`} />
 						{:else if step.icon === 'fa-solid fa-table-tennis-paddle-ball'}
 							<i class={`${step.icon} text-paddle-tan`} />
+						{:else if step.icon === 'fa-solid fa-film'}
+							<i class={`${step.icon} text-turkish-ginger`} />
 						{:else}
 							<i class={`${step.icon} text-secondary-300`} />
 						{/if}

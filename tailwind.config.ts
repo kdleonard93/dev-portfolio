@@ -1,20 +1,24 @@
-import { join } from 'path'
-import type { Config } from 'tailwindcss'
+import { join } from 'path';
+import type { Config } from 'tailwindcss';
 import forms from '@tailwindcss/forms';
 import { skeleton } from '@skeletonlabs/tw-plugin';
-import { Wet } from './src/Wet'
+import { Wet } from './src/Wet';
 
 export default {
 	darkMode: 'class',
-	content: ['./src/**/*.{html,js,svelte,ts}', join(require.resolve('@skeletonlabs/skeleton'), '../**/*.{html,js,svelte,ts}')],
+	content: [
+		'./src/**/*.{html,js,svelte,ts}',
+		join(require.resolve('@skeletonlabs/skeleton'), '../**/*.{html,js,svelte,ts}')
+	],
 	theme: {
 		extend: {
 			colors: {
 				'hashnode-blue': '#2463EB',
 				'cali-gold': '#FFC30B',
-				'paddle-tan': '#93645F'
+				'paddle-tan': '#93645F',
+				'turkish-ginger': '#F6F7BD'
 			}
-		},
+		}
 	},
 	plugins: [
 		forms,
@@ -23,25 +27,23 @@ export default {
 				preset: [
 					{
 						name: 'modern',
-						enhancements: true,
+						enhancements: true
 					},
 					{
 						name: 'wintry',
-						enhancements: true,
+						enhancements: true
 					},
 					{
 						name: 'crimson',
-						enhancements: true,
+						enhancements: true
 					},
 					{
 						name: 'skeleton',
-						enhancements: true,
-					},
+						enhancements: true
+					}
 				],
-				custom: [
-					Wet,
-				],
-			},
-		}),
-	],
+				custom: [Wet]
+			}
+		})
+	]
 } satisfies Config;
