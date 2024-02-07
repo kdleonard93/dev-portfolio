@@ -1,5 +1,7 @@
 <script lang="ts">
 	import { Stepper, Step } from '@skeletonlabs/skeleton';
+	import { ConicGradient } from '@skeletonlabs/skeleton';
+	import type { ConicStop } from '@skeletonlabs/skeleton';
 
 	function handleComplete() {
 		window.open('https://github.com/kdleonard93?tab=repositories');
@@ -57,6 +59,13 @@
 				'I place great emphasis on transparent and effective communication, which I believe is crucial for building strong team relationships and enhancing productivity. I am committed to continual learning and staying updated with the latest technologies, with a keen interest in finance technology and exploring new frameworks like SvelteKit and languages like TypeScript.'
 		}
 	];
+	const conicStops: ConicStop[] = [
+		{ label: 'Javascript', color: '#F7DF1C', start: 0, end: 15 },
+		{ label: 'Svelte', color: '#FF3E00', start: 15, end: 30 },
+		{ label: 'PHP', color: '#7A86B8', start: 30, end: 60 },
+		{ label: 'Python', color: '#306998', start: 60, end: 100 }
+	];
+
 	export const Main = null;
 </script>
 
@@ -72,6 +81,7 @@
 				+ Sveltekit, Node.js, Python + Django/Flask, PHP, Wordpress, TailwindCSS + SkeletonUI, & MongoDB
 				or CockroachDB (PostgreSQL)
 			</p>
+			<ConicGradient stops={conicStops} legend>Skill Pie</ConicGradient>
 			<a
 				href="https://www.linkedin.com/in/kyle-leonard93/"
 				target="_blank"
@@ -109,36 +119,43 @@
 			<i class="fa-solid fa-blog" />
 			<p>Check out my blog!</p>
 		</a>
-
-		<Stepper buttonCompleteLabel="All Projects" on:complete={handleComplete} target="_blank">
-			{#each steps as step}
-				<Step stepTerm="Project">
-					<svelte:fragment slot="header">
-						{#if step.icon === 'fa-solid fa-sack-dollar'}
-							<i class={`${step.icon} text-cali-gold`} />
-						{:else if step.icon === 'fa-solid fa-table-tennis-paddle-ball'}
-							<i class={`${step.icon} text-paddle-tan`} />
-						{:else if step.icon === 'fa-solid fa-film'}
-							<i class={`${step.icon} text-turkish-ginger`} />
-						{:else}
-							<i class={`${step.icon} text-secondary-300`} />
-						{/if}
-						{#if step.url}
-							<a href={step.url} target="_blank">
+		<div class="project-container flex justify-evenly flex-row max-[820px]:flex-col">
+			<Stepper
+				buttonCompleteLabel="All Projects"
+				on:complete={handleComplete}
+				target="_blank"
+				class="w-full max-w-prose p-2 m-1"
+			>
+				{#each steps as step}
+					<Step stepTerm="Project">
+						<svelte:fragment slot="header">
+							{#if step.icon === 'fa-solid fa-sack-dollar'}
+								<i class={`${step.icon} text-cali-gold`} />
+							{:else if step.icon === 'fa-solid fa-table-tennis-paddle-ball'}
+								<i class={`${step.icon} text-paddle-tan`} />
+							{:else if step.icon === 'fa-solid fa-film'}
+								<i class={`${step.icon} text-turkish-ginger`} />
+							{:else}
+								<i class={`${step.icon} text-secondary-300`} />
+							{/if}
+							{#if step.url}
+								<a href={step.url} target="_blank">
+									<h3 class="hover:underline decoration-wavy duration-200">
+										{step.name}
+									</h3>
+								</a>
+							{:else}
 								<h3 class="hover:underline decoration-wavy duration-200">
 									{step.name}
 								</h3>
-							</a>
-						{:else}
-							<h3 class="hover:underline decoration-wavy duration-200">
-								{step.name}
-							</h3>
-						{/if}
-					</svelte:fragment>
-					<p>{step.description}</p>
-				</Step>
-			{/each}
-		</Stepper>
+							{/if}
+						</svelte:fragment>
+						<p>{step.description}</p>
+					</Step>
+				{/each}
+			</Stepper>
+			<ConicGradient stops={conicStops} legend class="p-2 m-1">Skill Pie</ConicGradient>
+		</div>
 	</section>
 	<section
 		id="about"
