@@ -81,7 +81,6 @@
 				+ Sveltekit, Node.js, Python + Django/Flask, PHP, Wordpress, TailwindCSS + SkeletonUI, & MongoDB
 				or CockroachDB (PostgreSQL)
 			</p>
-			<ConicGradient stops={conicStops} legend>Skill Pie</ConicGradient>
 			<a
 				href="https://www.linkedin.com/in/kyle-leonard93/"
 				target="_blank"
