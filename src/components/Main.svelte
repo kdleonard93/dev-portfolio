@@ -81,11 +81,11 @@
 				+ Sveltekit, Node.js, Python + Django/Flask, PHP, Wordpress, TailwindCSS + SkeletonUI, & MongoDB
 				or CockroachDB (PostgreSQL)
 			</p>
-			<a href="https://www.linkedin.com/in/kyle-leonard93/" target="_blank" class="mx-auto lg:mr-auto text-base sm:text-large md:text-xl poppins relative overflow-hidden px-6 py-3 group rounded-full bg-primary-500 cursor-pointer">
+			<!-- <a href="https://www.linkedin.com/in/kyle-leonard93/" target="_blank" class="mx-auto lg:mr-auto text-base sm:text-large md:text-xl poppins relative overflow-hidden px-6 py-3 group rounded-full bg-primary-500 cursor-pointer">
 				<div class="absolute top-0 right-full w-full h-full bg-primary-400 opacity-20 group-hover:translate-x-full z-0 duration-200">
 				</div>
-				<h4 class="relative z-9">Reach out! &rarr;</h4>
-			</a>
+				<h4 class="relative z-9">Reach out!</h4>
+			</a> -->
 		</div>
 		<div class="relative grid place-items-center">
 			<!-- svelte-ignore a11y-img-redundant-alt -->
