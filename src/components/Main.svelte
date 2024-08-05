@@ -10,10 +10,11 @@
 	const steps = [
 		{
 			id: '1',
-			name: 'Pong Game',
-			icon: 'fa-solid fa-table-tennis-paddle-ball',
-			description: 'Try and get a high score in this all time classic!',
-			url: 'https://github.com/kdleonard93/100-Days-Of-Code_Python/tree/main/day-22'
+			name: 'Leo Ledger',
+			icon: 'fa-solid fa-sack-dollar',
+			description:
+				"Whether it's regular budget tracking, setting financial goals, forecasting expenses, or identifying savings opportunities, this tool aims to cover it all.",
+			url: 'https://leo-ledger.onrender.com/'
 		},
 		{
 			id: '2',
@@ -33,11 +34,10 @@
 		},
 		{
 			id: '4',
-			name: 'Leo Ledger',
-			icon: 'fa-solid fa-sack-dollar',
-			description:
-				"Whether it's regular budget tracking, setting financial goals, forecasting expenses, or identifying savings opportunities, this tool aims to cover it all. (coming soon).",
-			url: ''
+			name: 'Pong Game',
+			icon: 'fa-solid fa-table-tennis-paddle-ball',
+			description: 'Try and get a high score in this all time classic!',
+			url: 'https://github.com/kdleonard93/100-Days-Of-Code_Python/tree/main/day-22'
 		}
 	];
 
