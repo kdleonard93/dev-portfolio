@@ -14,7 +14,7 @@
 			icon: 'fa-solid fa-sack-dollar',
 			description:
 				"Whether it's regular budget tracking, setting financial goals, forecasting expenses, or identifying savings opportunities, this tool aims to cover it all.",
-			url: 'https://leo-ledger.onrender.com/'
+			url: 'https://github.com/kdleonard93/Leo_Ledger'
 		},
 		{
 			id: '2',
@@ -73,13 +73,12 @@
 	<section id="introPage" class="grid grid-cols-1 lg:grid-cols-2 gap-10 py-8 sm:py-14">
 		<div class="flex flex-col lg:justify-center text-center lg:text-left gap-6 md:gap-8 lg:gap-10">
 			<h2 class="font-semi-bold text-4xl sm:text-5xl md:text-6xl">
-				Hey! I'm <span class="poppins text-primary-400">Kyle</span> Leonard,
-				<br />Software<span class="poppins text-primary-400">Engineer</span>.
+				<span class="poppins text-primary-400">Kyle</span> Leonard
+				<br />Software<span class="poppins text-primary-400">Engineer</span>
 			</h2>
 			<p class="text-base sm:text-lg md:text-xl">
 				My <span class="text-primary-400">tech arsenal</span> includes Javascript/Typescript, Svelte
-				+ Sveltekit, Node.js, Python + Django/Flask, PHP, Wordpress, TailwindCSS + SkeletonUI, & MongoDB
-				or CockroachDB (PostgreSQL)
+				+ Sveltekit, Node.js, Python + Django/Flask, PHP, Wordpress, TailwindCSS, SQLite/PostgreSQL
 			</p>
 			<!-- <a href="https://www.linkedin.com/in/kyle-leonard93/" target="_blank" class="mx-auto lg:mr-auto text-base sm:text-large md:text-xl poppins relative overflow-hidden px-6 py-3 group rounded-full bg-primary-500 cursor-pointer">
 				<div class="absolute top-0 right-full w-full h-full bg-primary-400 opacity-20 group-hover:translate-x-full z-0 duration-200">
