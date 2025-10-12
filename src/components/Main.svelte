@@ -38,6 +38,13 @@
 			icon: 'fa-solid fa-table-tennis-paddle-ball',
 			description: 'Try and get a high score in this all time classic!',
 			url: 'https://github.com/kdleonard93/100-Days-Of-Code_Python/tree/main/day-22'
+		},
+		{
+			id: '5',
+			name: 'Creatures of Habit',
+			icon: 'fa-solid fa-paw',
+			description: 'RPG style habit tracking app that aims to gamify the way you build new healthy habits.',
+			url: 'https://github.com/kdleonard93/creatures-of-habit'
 		}
 	];
 
