@@ -89,7 +89,7 @@
 		<div class="relative grid place-items-center">
 			<!-- svelte-ignore a11y-img-redundant-alt -->
 			<img
-				src="https://link.storjshare.io/raw/jwt36t75mpohzjdhvwuuvoxyo2ca/portfolio-images%2Fprofile-img.png"
+				src="/images/profile-img.png"
 				alt="Profile Image"
 				class="object-cover z-[2] max-h-[70vh]"
 			/>
