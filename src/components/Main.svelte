@@ -10,6 +10,13 @@
 	const steps = [
 		{
 			id: '1',
+			name: 'Creatures of Habit',
+			icon: 'fa-solid fa-paw',
+			description: 'RPG style habit tracking app that aims to gamify the way you build new healthy habits.',
+			url: 'https://creatures-of-habit-production.up.railway.app/'
+		},
+		{
+			id: '2',
 			name: 'Leo Ledger',
 			icon: 'fa-solid fa-sack-dollar',
 			description:
@@ -17,7 +24,7 @@
 			url: 'https://github.com/kdleonard93/Leo_Ledger'
 		},
 		{
-			id: '2',
+			id: '3',
 			name: 'Automated Email Sender',
 			icon: 'fa-solid fa-envelope',
 			description:
@@ -25,7 +32,7 @@
 			url: 'https://github.com/kdleonard93/automated_email_sender'
 		},
 		{
-			id: '3',
+			id: '4',
 			name: 'Film Fan',
 			icon: 'fa-solid fa-film',
 			description:
@@ -33,18 +40,11 @@
 			url: 'https://github.com/kdleonard93/film-fan'
 		},
 		{
-			id: '4',
+			id: '5',
 			name: 'Pong Game',
 			icon: 'fa-solid fa-table-tennis-paddle-ball',
 			description: 'Try and get a high score in this all time classic!',
 			url: 'https://github.com/kdleonard93/100-Days-Of-Code_Python/tree/main/day-22'
-		},
-		{
-			id: '5',
-			name: 'Creatures of Habit',
-			icon: 'fa-solid fa-paw',
-			description: 'RPG style habit tracking app that aims to gamify the way you build new healthy habits.',
-			url: 'https://github.com/kdleonard93/creatures-of-habit'
 		}
 	];
 
