@@ -120,7 +120,7 @@
 		<div class="flex flex-col lg:justify-center text-center lg:text-left gap-6 md:gap-8 lg:gap-10 animate-fade-in">
 			<h2 class="font-semi-bold text-4xl sm:text-5xl md:text-6xl bg-gradient-to-r from-primary-400 via-secondary-400 to-tertiary-400 bg-clip-text text-transparent animate-gradient">
 				<span class="poppins">Kyle</span> Leonard
-				<br />Software<span class="poppins">Engineer</span>
+				<br />Software Engineer
 			</h2>
 			<p class="text-base sm:text-lg md:text-xl text-slate-300">
 				My <span class="text-primary-400 font-semibold">tech arsenal</span> includes Javascript/Typescript, Svelte
