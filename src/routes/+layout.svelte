@@ -24,7 +24,7 @@
 			<i class="fa-solid fa-arrow-up group-hover:-translate-y-1 transition-transform duration-300" />
 		</button>
 	</div>
-	<Header {y} {innerHeight} />
+	<Header {y} />
 	<slot />
 	<Footer />
 </div>

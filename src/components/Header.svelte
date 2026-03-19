@@ -1,6 +1,5 @@
 <script>
 	export let y = 0;
-	export let innerHeight = 0;
 	let tabs = [
 		{ name: 'Projects', link: 'https://github.com/kdleonard93?tab=repositories' },
 		{ name: 'About', link: '#about' },

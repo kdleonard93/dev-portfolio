@@ -158,7 +158,7 @@
 			target="_blank"
 			class="mx-auto px-6 py-3 rounded-full border-2 border-solid border-primary-500 bg-primary-500/10 flex items-center gap-2 mb-4 sm:-mb-0 -mt-10 hover:bg-primary-500 hover:scale-105 transition-all duration-300 group"
 		>
-			<i class="fa-brands fa-linktree group-hover:rotate-12 transition-transform duration-300" />
+			<i class="fa-brands fa-linktree group-hover:rotate-12 transition-transform duration-300"></i>
 			<p class="font-semibold">Checkout my Linktree!</p>
 		</a>
 		<div class="project-container flex justify-evenly flex-row max-[820px]:flex-col gap-8">
