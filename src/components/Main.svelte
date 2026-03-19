@@ -8,6 +8,15 @@
 		end: number;
 	}
 
+	interface Project {
+		id: string;
+		name: string;
+		icon: string;
+		description: string;
+		note?: string;
+		url?: string;
+	}
+
 	let isVisible = {
 		intro: false,
 		projects: false,
@@ -39,12 +48,13 @@
 		return () => observer.disconnect();
 	})
 
-	const steps = [
+	const steps: Project[] = [
 		{
 			id: '1',
 			name: 'Creatures of Habit',
 			icon: 'fa-solid fa-paw',
 			description: 'RPG style habit tracking app that aims to gamify the way you build new healthy habits.',
+			note: 'Might need to click link twice if you get a bad gateway error.',
 			url: 'https://creatures-of-habit-production.up.railway.app/'
 		},
 		{
@@ -124,13 +134,8 @@
 			</h2>
 			<p class="text-base sm:text-lg md:text-xl text-slate-300">
 				My <span class="text-primary-400 font-semibold">tech arsenal</span> includes Javascript/Typescript, Svelte
-				+ Sveltekit, Node.js, Python + Django/Flask, PHP, Wordpress, TailwindCSS, SQLite/PostgreSQL
+				+ Sveltekit, Node.js, Python, PHP, Wordpress, SQLite/PostgreSQL, Docker, and Kubernetes
 			</p>
-			<!-- <a href="https://www.linkedin.com/in/kyle-leonard93/" target="_blank" class="mx-auto lg:mr-auto text-base sm:text-large md:text-xl poppins relative overflow-hidden px-6 py-3 group rounded-full bg-primary-500 cursor-pointer">
-				<div class="absolute top-0 right-full w-full h-full bg-primary-400 opacity-20 group-hover:translate-x-full z-0 duration-200">
-				</div>
-				<h4 class="relative z-9">Reach out!</h4>
-			</a> -->
 		</div>
 		<div class="relative grid place-items-center group">
 			<div class="absolute inset-0 bg-gradient-to-r from-primary-500 via-secondary-500 to-tertiary-500 rounded-full blur-3xl opacity-20 group-hover:opacity-30 transition-opacity duration-500"></div>
@@ -188,7 +193,7 @@
 								<div class="flex items-center justify-between mb-2">
 									{#if step.url}
 										<a href={step.url} target="_blank" class="group/link">
-											<h3 class="text-xl font-bold text-white group-hover/link:text-primary-400 transition-colors duration-200 flex items-center gap-2">
+											<h3 class="text-xl font-bold text-white group-hover/link:text-primary-400 transition-colors duration-200 flex items-center gap-2 underline-offset-2 underline">
 												{step.name}
 												<i class="fa-solid fa-arrow-up-right-from-square text-sm opacity-0 group-hover/link:opacity-100 transition-opacity duration-200"></i>
 											</h3>
@@ -199,6 +204,9 @@
 									<span class="text-xs font-semibold text-primary-400 bg-primary-500/20 px-3 py-1 rounded-full">Project #{step.id}</span>
 								</div>
 								<p class="text-slate-300 leading-relaxed">{step.description}</p>
+								{#if step.note}
+									<p class="text-xs text-slate-400 italic mt-2">{step.note}</p>
+								{/if}
 							</div>
 						</div>
 					</div>
