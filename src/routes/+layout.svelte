@@ -1,13 +1,7 @@
 <script lang="ts">
-	import '../app.postcss';
 	import '../app.css';
 	import Header from '../components/Header.svelte';
 	import Footer from '../components/Footer.svelte';
-
-	// Floating UI for Popups
-	import { computePosition, autoUpdate, flip, shift, offset, arrow } from '@floating-ui/dom';
-	import { storePopup } from '@skeletonlabs/skeleton';
-	storePopup.set({ computePosition, autoUpdate, flip, shift, offset, arrow });
 
 	let y: any;
 	let innerHeight = 0;
@@ -25,9 +19,9 @@
 	>
 		<button
 			on:click={goTop}
-			class="ml-auto animate-pulse rounded-full bg-slate-900 text-primary-400 px-3 sm:px-4 hover:bg-slate-800 cursor-pointer aspect-square grid place-items-center"
+			class="ml-auto rounded-full bg-gradient-to-r from-primary-500 to-secondary-500 text-white px-4 sm:px-5 py-4 sm:py-5 hover:shadow-lg hover:shadow-primary-500/50 hover:scale-110 transition-all duration-300 cursor-pointer aspect-square grid place-items-center group"
 		>
-			<i class="fa-solid fa-arrow-up" />
+			<i class="fa-solid fa-arrow-up group-hover:-translate-y-1 transition-transform duration-300" />
 		</button>
 	</div>
 	<Header {y} {innerHeight} />

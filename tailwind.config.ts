@@ -1,14 +1,10 @@
-import { join } from 'path';
 import type { Config } from 'tailwindcss';
 import forms from '@tailwindcss/forms';
-import { skeleton } from '@skeletonlabs/tw-plugin';
-import { Wet } from './src/Wet';
 
 export default {
 	darkMode: 'class',
 	content: [
-		'./src/**/*.{html,js,svelte,ts}',
-		join(require.resolve('@skeletonlabs/skeleton'), '../**/*.{html,js,svelte,ts}')
+		'./src/**/*.{html,js,svelte,ts}'
 	],
 	theme: {
 		extend: {
@@ -16,34 +12,74 @@ export default {
 				'hashnode-blue': '#2463EB',
 				'cali-gold': '#FFC30B',
 				'paddle-tan': '#93645F',
-				'turkish-ginger': '#F6F7BD'
+				'turkish-ginger': '#F6F7BD',
+				primary: {
+					50: '#eff6ff',
+					100: '#dbeafe',
+					200: '#bfdbfe',
+					300: '#93c5fd',
+					400: '#60a5fa',
+					500: '#3b82f6',
+					600: '#2563eb',
+					700: '#1d4ed8',
+					800: '#1e40af',
+					900: '#1e3a8a'
+				},
+				secondary: {
+					50: '#f5f3ff',
+					100: '#ede9fe',
+					200: '#ddd6fe',
+					300: '#c4b5fd',
+					400: '#a78bfa',
+					500: '#8b5cf6',
+					600: '#7c3aed',
+					700: '#6d28d9',
+					800: '#5b21b6',
+					900: '#4c1d95'
+				},
+				tertiary: {
+					50: '#ecfeff',
+					100: '#cffafe',
+					200: '#a5f3fc',
+					300: '#67e8f9',
+					400: '#22d3ee',
+					500: '#06b6d4',
+					600: '#0891b2',
+					700: '#0e7490',
+					800: '#155e75',
+					900: '#164e63'
+				},
+				surface: {
+					50: '#f8fafc',
+					100: '#f1f5f9',
+					200: '#e2e8f0',
+					300: '#cbd5e1',
+					400: '#94a3b8',
+					500: '#64748b',
+					600: '#475569',
+					700: '#334155',
+					800: '#1e293b',
+					900: '#0f172a'
+				}
+			},
+			keyframes: {
+				gradient: {
+					'0%': { backgroundPosition: '0% 50%' },
+					'50%': { backgroundPosition: '100% 50%' },
+					'100%': { backgroundPosition: '0% 50%' }
+				},
+				fadeIn: {
+					from: { opacity: '0', transform: 'translateY(20px)' },
+					to: { opacity: '1', transform: 'translateY(0)' }
+				}
+			},
+			animation: {
+				gradient: 'gradient 8s ease infinite',
+				'fade-in': 'fadeIn 1s ease-out forwards'
 			}
 		}
 	},
 	plugins: [
-		forms,
-		skeleton({
-			themes: {
-				preset: [
-					{
-						name: 'modern',
-						enhancements: true
-					},
-					{
-						name: 'wintry',
-						enhancements: true
-					},
-					{
-						name: 'crimson',
-						enhancements: true
-					},
-					{
-						name: 'skeleton',
-						enhancements: true
-					}
-				],
-				custom: [Wet]
-			}
-		})
+		forms
 	]
 } satisfies Config;

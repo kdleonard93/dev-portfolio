@@ -1,50 +1,43 @@
 <footer
-	class="py-20 sm:py-32 border-t border-solid border-primary-950 flex flex-col gap-4 sm:gap-8 justify-center items-center"
+	class="py-20 sm:py-32 border-t border-solid border-primary-500/20 bg-surface-900/50 backdrop-blur-sm flex flex-col gap-4 sm:gap-8 justify-center items-center relative overflow-hidden"
 >
-	<p class="px-4 py-2 font-medium relative overflow-hidden px-5 py-2 group bg-white text-black">
-		Connect with me! &darr;
-	</p>
+	<div class="absolute inset-0 bg-gradient-to-t from-primary-500/5 via-transparent to-transparent pointer-events-none"></div>
+	<div class="px-6 py-3 font-semibold relative overflow-hidden group bg-gradient-to-r from-primary-500 to-secondary-500 text-white rounded-full shadow-lg shadow-primary-500/30">
+		<span class="relative z-10">Connect with me! &darr;</span>
+		<div class="absolute inset-0 bg-gradient-to-r from-secondary-500 to-tertiary-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+	</div>
 
-	<div class="flex flex-col gap-4 items-center justify-center sm:gap-6 mx-auto">
-		<a href="mailto:contact@digitaldopamine.dev"
-			><b class="pr-2">Email</b>
-			<span class="text-primary-400 hover:text-">contact@digitaldopamine.dev</span></a
+	<div class="flex flex-col gap-4 items-center justify-center sm:gap-6 mx-auto relative z-10">
+		<a href="mailto:contact@digitaldopamine.dev" class="group flex items-center gap-2 hover:translate-x-2 transition-transform duration-300"
+			><b class="pr-2 text-slate-300">Email</b>
+			<span class="text-primary-400 group-hover:text-secondary-400 transition-colors duration-300">contact@digitaldopamine.dev</span></a
 		>
-		<p>
-			<b class="pr-2">GitHub</b>
-			<a href="https://github.com/kdleonard93" target="_blank" class="text-primary-400"
-				>@kdleonard93<sup class=""
-					><span class="text-xs scale-75 pl-0.5"
-						><i class="fa-solid fa-arrow-up-right-from-square text-xs scale-[75%]" /></span
-					></sup
-				></a
+		<div class="group flex items-center gap-2 hover:translate-x-2 transition-transform duration-300">
+			<b class="pr-2 text-slate-300">GitHub</b>
+			<a href="https://github.com/kdleonard93" target="_blank" class="text-primary-400 group-hover:text-secondary-400 transition-colors duration-300 flex items-center gap-1"
+				>@kdleonard93
+				<i class="fa-solid fa-arrow-up-right-from-square text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300" /></a
 			>
-		</p>
-		<p>
-			<b class="pr-2">LinkedIn</b>
+		</div>
+		<div class="group flex items-center gap-2 hover:translate-x-2 transition-transform duration-300">
+			<b class="pr-2 text-slate-300">LinkedIn</b>
 			<a
 				href="https://www.linkedin.com/in/kyle-leonard93/"
 				target="_blank"
-				class="text-primary-400 hover:text-white"
-				>Kyle Leonard<sup class=""
-					><span class="text-xs scale-75 pl-0.5"
-						><i class="fa-solid fa-arrow-up-right-from-square text-xs scale-[75%]" /></span
-					></sup
-				></a
+				class="text-primary-400 group-hover:text-secondary-400 transition-colors duration-300 flex items-center gap-1"
+				>Kyle Leonard
+				<i class="fa-solid fa-arrow-up-right-from-square text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300" /></a
 			>
-		</p>
-		<p>
-			<b class="pr-2">Discord</b>
+		</div>
+		<div class="group flex items-center gap-2 hover:translate-x-2 transition-transform duration-300">
+			<b class="pr-2 text-slate-300">Discord</b>
 			<a
 				href="https://www.linkedin.com/in/kyle-leonard93/"
 				target="_blank"
-				class="text-primary-400 hover:text-white"
-				>Kyle Leonard<sup class=""
-					><span class="text-xs scale-75 pl-0.5"
-						><i class="fa-solid fa-arrow-up-right-from-square text-xs scale-[75%]" /></span
-					></sup
-				></a
+				class="text-primary-400 group-hover:text-secondary-400 transition-colors duration-300 flex items-center gap-1"
+				>Kyle Leonard
+				<i class="fa-solid fa-arrow-up-right-from-square text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300" /></a
 			>
-		</p>
+		</div>
 	</div>
 </footer>

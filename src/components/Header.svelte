@@ -1,5 +1,6 @@
 <script>
 	export let y = 0;
+	export let innerHeight = 0;
 	let tabs = [
 		{ name: 'Projects', link: 'https://github.com/kdleonard93?tab=repositories' },
 		{ name: 'About', link: '#about' },
@@ -8,23 +9,25 @@
 </script>
 
 <header
-	class={'sticky z-[10] w-full top-0 duration-200 px-6 flex items-center justify-between ' +
+	class={'sticky z-[10] w-full top-0 duration-300 px-6 flex items-center justify-between transition-all ' +
 		(y > 0
-			? 'py-4 bg-secondary-400 border border-slate-900'
+			? 'py-4 bg-surface-900/80 backdrop-blur-xl border-b border-primary-500/20 shadow-lg shadow-primary-500/10'
 			: 'py-6 bg-transparent border-transparent')}
 >
-	<h1 class="font-medium">
-		<b class="font-bold- poppins">Kyle</b> Leonard
+	<h1 class="font-medium text-lg">
+		<b class="font-bold poppins bg-gradient-to-r from-primary-400 to-secondary-400 bg-clip-text text-transparent">Kyle</b> <span class="text-white">Leonard</span>
 	</h1>
-	<div class="sm:flex items-center gap-4 hidden">
+	<div class="sm:flex items-center gap-6 hidden">
 		{#each tabs as tab, index}
 			{#if tab.name === 'Blog'}
-				<a href={tab.link} target="_blank" class="duration-200 hover:text-primary-400">
+				<a href={tab.link} target="_blank" class="relative group duration-300 hover:text-primary-400 font-medium">
 					<p>{tab.name}</p>
+					<span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-primary-400 to-secondary-400 group-hover:w-full transition-all duration-300"></span>
 				</a>
 			{:else}
-				<a href={tab.link} class="duration-200 hover:text-primary-400">
+				<a href={tab.link} class="relative group duration-300 hover:text-primary-400 font-medium">
 					<p>{tab.name}</p>
+					<span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-primary-400 to-secondary-400 group-hover:w-full transition-all duration-300"></span>
 				</a>
 			{/if}
 		{/each}
@@ -32,11 +35,14 @@
 	<a
 		href="https://www.linkedin.com/in/kyle-leonard93/"
 		target="_blank"
-		class="relative overflow-hidden px-5 py-2 group rounded-full bg-primary-500"
+		class="relative overflow-hidden px-6 py-2.5 group rounded-full bg-gradient-to-r from-primary-500 to-secondary-500 hover:shadow-lg hover:shadow-primary-500/50 transition-all duration-300 hover:scale-105 font-semibold"
 	>
 		<div
-			class="absolute top-0 right-full w-full h-full bg-secondary-400 opacity-20 group-hover:translate-x-full z-0 duration-200"
+			class="absolute inset-0 bg-gradient-to-r from-secondary-500 to-tertiary-500 opacity-0 group-hover:opacity-100 transition-opacity duration-300"
 		></div>
-		<h4 class="relative z-9">Reach out!</h4>
+		<h4 class="relative z-9 flex items-center gap-2">
+			Reach out!
+			<i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform duration-300 text-sm"></i>
+		</h4>
 	</a>
 </header>
