@@ -159,7 +159,7 @@
 		</div>
 		<div class="flex flex-col gap-2 text-center"><h6 class="text-medium sm:text-xl md:text-2xl text-slate-300">For the link to my <span class="font-semibold bg-gradient-to-r from-primary-400 to-secondary-400 bg-clip-text text-transparent">Substack</span> and all other profiles</h6></div>
 		<a
-			href="https://digitaldopaminellc.substack.com/"
+			href="https://linktr.ee/digital_dopamine"
 			target="_blank"
 			class="mx-auto px-6 py-3 rounded-full border-2 border-solid border-primary-500 bg-primary-500/10 flex items-center gap-2 mb-4 sm:-mb-0 -mt-10 hover:bg-primary-500 hover:scale-105 transition-all duration-300 group"
 		>
