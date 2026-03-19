@@ -118,7 +118,7 @@
 		class="grid grid-cols-1 lg:grid-cols-2 gap-10 py-8 sm:py-14 transition-all duration-1000 {isVisible.intro ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}"
 	>
 		<div class="flex flex-col lg:justify-center text-center lg:text-left gap-6 md:gap-8 lg:gap-10 animate-fade-in">
-			<h2 class="font-semi-bold text-4xl sm:text-5xl md:text-6xl bg-gradient-to-r from-primary-400 via-secondary-400 to-tertiary-400 bg-clip-text text-transparent animate-gradient">
+			<h2 class="font-semi-bold text-4xl sm:text-5xl md:text-6xl bg-gradient-to-r from-primary-400 via-secondary-400 to-tertiary-400 bg-clip-text text-transparent animate-gradient leading-tight pb-2">
 				<span class="poppins">Kyle</span> Leonard
 				<br />Software Engineer
 			</h2>
@@ -148,26 +148,25 @@
 	>
 		<div class="flex flex-col gap-2 text-center">
 			<h6 class="text-large sm:text-xl md:text-2xl text-slate-300">
-				I've been documenting my journey through <span class="font-semibold text-hashnode-blue"
-					>Hashnode</span
-				>
+				I've been documenting my journey through <span class="font-semibold text-hashnode-blue">Hashnode</span> and more recently <span class="font-semibold bg-gradient-to-r from-primary-400 to-secondary-400 bg-clip-text text-transparent">Substack</span>
 			</h6>
-			<h3 class="font-semibold text-3xl sm:text-4xl md:text-5xl bg-gradient-to-r from-primary-400 to-secondary-400 bg-clip-text text-transparent">Curious to 👀 my articles?</h3>
+			<h3 class="font-semibold text-3xl sm:text-4xl md:text-5xl"><span class="bg-gradient-to-r from-primary-400 to-secondary-400 bg-clip-text text-transparent">Curious to</span> 👀 <span class="bg-gradient-to-r from-primary-400 to-secondary-400 bg-clip-text text-transparent">my articles?</span></h3>
 		</div>
+		<div class="flex flex-col gap-2 text-center"><h6 class="text-medium sm:text-xl md:text-2xl text-slate-300">For the link to my <span class="font-semibold bg-gradient-to-r from-primary-400 to-secondary-400 bg-clip-text text-transparent">Substack</span> and all other profiles</h6></div>
 		<a
-			href="https://blacknerd.dev/"
+			href="https://digitaldopaminellc.substack.com/"
 			target="_blank"
 			class="mx-auto px-6 py-3 rounded-full border-2 border-solid border-primary-500 bg-primary-500/10 flex items-center gap-2 mb-4 sm:-mb-0 -mt-10 hover:bg-primary-500 hover:scale-105 transition-all duration-300 group"
 		>
-			<i class="fa-solid fa-blog group-hover:rotate-12 transition-transform duration-300" />
-			<p class="font-semibold">Check out my blog!</p>
+			<i class="fa-brands fa-linktree group-hover:rotate-12 transition-transform duration-300" />
+			<p class="font-semibold">Checkout my Linktree!</p>
 		</a>
 		<div class="project-container flex justify-evenly flex-row max-[820px]:flex-col gap-8">
 			<div class="w-full max-w-prose space-y-6">
 				{#each steps as step, index}
 					<div 
 						role="article"
-						class="group relative bg-surface-800/50 backdrop-blur-sm border border-primary-500/20 rounded-2xl p-6 transition-all duration-300 hover:border-primary-500/60 hover:shadow-lg hover:shadow-primary-500/20 hover:-translate-y-1"
+						class="group relative bg-slate-700/60 backdrop-blur-sm border border-primary-500/30 rounded-2xl p-6 transition-all duration-300 hover:border-primary-400/70 hover:shadow-lg hover:shadow-primary-400/25 hover:-translate-y-1"
 						on:mouseenter={() => hoveredProject = step.id}
 						on:mouseleave={() => hoveredProject = null}
 						style="animation-delay: {index * 100}ms"
@@ -217,7 +216,7 @@
 			</div>
 			<div class="relative group">
 				<div class="absolute inset-0 bg-gradient-to-br from-primary-500 via-secondary-500 to-tertiary-500 rounded-2xl blur-xl opacity-20 group-hover:opacity-40 transition-opacity duration-500"></div>
-				<div class="relative bg-surface-800/50 backdrop-blur-sm border border-primary-500/20 rounded-2xl p-6">
+				<div class="relative bg-slate-700/60 backdrop-blur-sm border border-primary-500/30 rounded-2xl p-6">
 					<h3 class="text-2xl font-bold mb-4 text-center bg-gradient-to-r from-primary-400 to-secondary-400 bg-clip-text text-transparent">Skills Overview</h3>
 					<div class="flex flex-col items-center gap-6 transform transition-transform duration-500 group-hover:scale-105">
 						<div
@@ -269,51 +268,51 @@
 			The <span class="bg-gradient-to-r from-primary-400 to-secondary-400 bg-clip-text text-transparent">Complete</span> Package
 		</h5>
 		<div class="flex flex-col overflow-x-scroll gap-10 max-w-[800px] mx-auto w-full">
-			<table class="bg-surface-800/80 backdrop-blur-sm text-white rounded-2xl text-center border border-primary-500/20 overflow-hidden shadow-lg shadow-primary-500/10">
+			<table class="bg-slate-700/70 backdrop-blur-sm text-slate-100 rounded-2xl text-center border border-primary-500/30 overflow-hidden shadow-lg shadow-primary-500/15">
 				<thead class={'border-b border-solid border-primary-500/30'}>
-					<tr class="bg-surface-700/50">
+					<tr class="bg-slate-600/50">
 						<th />
-						<th class="whitespace-nowrap p-3 px-4 text-slate-400">Candidate #1</th>
-						<th class="whitespace-nowrap p-3 px-4 text-slate-400">Candidate #2</th>
-						<th class="whitespace-nowrap p-3 px-4 text-slate-400">Candidate #3</th>
+						<th class="whitespace-nowrap p-3 px-4 text-slate-300">Candidate #1</th>
+						<th class="whitespace-nowrap p-3 px-4 text-slate-300">Candidate #2</th>
+						<th class="whitespace-nowrap p-3 px-4 text-slate-300">Candidate #3</th>
 						<th class="bg-gradient-to-r from-primary-600 to-secondary-600 text-white whitespace-nowrap p-4 px-8 font-bold">Me</th>
 					</tr>
 				</thead>
 				<tbody>
-					<tr class="border-b border-solid border-primary-500/20 hover:bg-surface-700/30 transition-colors duration-200">
+					<tr class="border-b border-solid border-primary-500/20 hover:bg-slate-600/40 transition-colors duration-200">
 						<td class="border-r border-solid border-primary-500/20 pl-4 pr-8 py-4 font-semibold text-sm text-left"
 							>Dedication</td
 						>
 						<td><i class="fa-solid fa-xmark text-error-500" /></td>
-						<td><i class="fa-solid fa-check text-slate-500" /></td>
+						<td><i class="fa-solid fa-check text-slate-400" /></td>
 						<td><i class="fa-solid fa-xmark text-error-500" /></td>
 						<td><i class="fa-solid fa-check text-success-500 text-lg" /></td>
 					</tr>
-					<tr class="border-b border-solid border-primary-500/20 hover:bg-surface-700/30 transition-colors duration-200">
+					<tr class="border-b border-solid border-primary-500/20 hover:bg-slate-600/40 transition-colors duration-200">
 						<td class="border-r border-solid border-primary-500/20 pl-4 pr-8 py-4 font-semibold text-sm text-left"
 							>Critical Thought</td
 						>
 						<td><i class="fa-solid fa-xmark text-error-500" /></td>
-						<td><i class="fa-solid fa-check text-slate-500" /></td>
-						<td><i class="fa-solid fa-check text-slate-500" /></td>
+						<td><i class="fa-solid fa-check text-slate-400" /></td>
+						<td><i class="fa-solid fa-check text-slate-400" /></td>
 						<td><i class="fa-solid fa-check text-success-500 text-lg" /></td>
 					</tr>
-					<tr class="border-b border-solid border-primary-500/20 hover:bg-surface-700/30 transition-colors duration-200">
+					<tr class="border-b border-solid border-primary-500/20 hover:bg-slate-600/40 transition-colors duration-200">
 						<td class="border-r border-solid border-primary-500/20 pl-4 pr-8 py-4 font-semibold text-sm text-left"
 							>Interpersonal Skills</td
 						>
-						<td><i class="fa-solid fa-check text-slate-500" /></td>
-						<td><i class="fa-solid fa-check text-slate-500" /></td>
+						<td><i class="fa-solid fa-check text-slate-400" /></td>
+						<td><i class="fa-solid fa-check text-slate-400" /></td>
 						<td><i class="fa-solid fa-xmark text-error-500" /></td>
 						<td><i class="fa-solid fa-check text-success-500 text-lg" /></td>
 					</tr>
-					<tr class="hover:bg-surface-700/30 transition-colors duration-200">
+					<tr class="hover:bg-slate-600/40 transition-colors duration-200">
 						<td class="border-r border-solid border-primary-500/20 pl-4 pr-8 py-4 font-semibold text-sm text-left"
 							>Programming Ability</td
 						>
-						<td><i class="fa-solid fa-check text-slate-500" /></td>
+						<td><i class="fa-solid fa-check text-slate-400" /></td>
 						<td><i class="fa-solid fa-xmark text-error-500" /></td>
-						<td><i class="fa-solid fa-check text-slate-500" /></td>
+						<td><i class="fa-solid fa-check text-slate-400" /></td>
 						<td><i class="fa-solid fa-check text-success-500 text-lg" /></td>
 					</tr>
 				</tbody>
