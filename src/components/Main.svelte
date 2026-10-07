@@ -51,6 +51,13 @@
 	const steps: Project[] = [
 		{
 			id: '1',
+			name: 'RAG Starter Kit',
+			icon: 'fa-solid fa-robot',
+			description: 'A minimal, local-first RAG (Retrieval-Augmented Generation) starter kit in TypeScript. Point it at documents, and get a chat app with grounded, cited answers running entirely on your machine.',
+			url: 'https://github.com/kdleonard93/rag-starter-kit'
+		},
+		{
+			id: '2',
 			name: 'Creatures of Habit',
 			icon: 'fa-solid fa-paw',
 			description: 'RPG style habit tracking app that aims to gamify the way you build new healthy habits.',
@@ -58,7 +65,7 @@
 			url: 'https://creatures-of-habit-production.up.railway.app/'
 		},
 		{
-			id: '2',
+			id: '3',
 			name: 'Leo Ledger',
 			icon: 'fa-solid fa-sack-dollar',
 			description:
@@ -66,7 +73,7 @@
 			url: 'https://github.com/kdleonard93/Leo_Ledger'
 		},
 		{
-			id: '3',
+			id: '4',
 			name: 'Automated Email Sender',
 			icon: 'fa-solid fa-envelope',
 			description:
@@ -74,7 +81,7 @@
 			url: 'https://github.com/kdleonard93/automated_email_sender'
 		},
 		{
-			id: '4',
+			id: '5',
 			name: 'Film Fan',
 			icon: 'fa-solid fa-film',
 			description:
@@ -82,7 +89,7 @@
 			url: 'https://github.com/kdleonard93/film-fan'
 		},
 		{
-			id: '5',
+			id: '6',
 			name: 'Pong Game',
 			icon: 'fa-solid fa-table-tennis-paddle-ball',
 			description: 'Try and get a high score in this all time classic!',
@@ -123,8 +130,8 @@
 </script>
 
 <main class="flex flex-col flex-1 p-4">
-	<section 
-		id="introPage" 
+	<section
+		id="introPage"
 		class="grid grid-cols-1 lg:grid-cols-2 gap-10 py-8 sm:py-14 transition-all duration-1000 {isVisible.intro ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}"
 	>
 		<div class="flex flex-col lg:justify-center text-center lg:text-left gap-6 md:gap-8 lg:gap-10 animate-fade-in">
@@ -147,8 +154,8 @@
 			/>
 		</div>
 	</section>
-	<section 
-		class="py-20 lg:py-32 flex flex-col gap-24 transition-all duration-1000 {isVisible.projects ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}" 
+	<section
+		class="py-20 lg:py-32 flex flex-col gap-24 transition-all duration-1000 {isVisible.projects ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10'}"
 		id="projects"
 	>
 		<div class="flex flex-col gap-2 text-center">
@@ -169,7 +176,7 @@
 		<div class="project-container flex justify-evenly flex-row max-[820px]:flex-col gap-8">
 			<div class="w-full max-w-prose space-y-6">
 				{#each steps as step, index}
-					<div 
+					<div
 						role="article"
 						class="group relative bg-slate-700/60 backdrop-blur-sm border border-primary-500/30 rounded-2xl p-6 transition-all duration-300 hover:border-primary-400/70 hover:shadow-lg hover:shadow-primary-400/25 hover:-translate-y-1"
 						on:mouseenter={() => hoveredProject = step.id}
@@ -211,7 +218,7 @@
 						</div>
 					</div>
 				{/each}
-				<a 
+				<a
 					href="https://github.com/kdleonard93?tab=repositories"
 					target="_blank"
 					class="block w-full text-center bg-gradient-to-r from-primary-500 to-secondary-500 text-white font-bold py-4 rounded-2xl hover:shadow-lg hover:shadow-primary-500/50 transition-all duration-300 hover:scale-105"
