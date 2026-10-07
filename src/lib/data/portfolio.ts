@@ -74,6 +74,7 @@ export const nav: NavLink[] = [
 	{ name: 'Projects', href: 'https://github.com/kdleonard93?tab=repositories', external: true },
 	{ name: 'Experience', href: '#experience' },
 	{ name: 'About', href: '#about' },
+	{ name: 'Skills', href: '#skills' },
 	{ name: 'Blog', href: 'https://digitaldopaminellc.substack.com/', external: true }
 ];
 

@@ -32,7 +32,7 @@
 		.join(', ')})`;
 </script>
 
-<Section className="pt-0">
+<Section id="skills" className="pt-0">
 	<Container>
 		<div use:reveal>
 			<Card className="grid items-center gap-10 sm:grid-cols-[minmax(0,240px)_1fr] sm:p-10">
