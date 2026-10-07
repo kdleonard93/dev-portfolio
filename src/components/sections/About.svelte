@@ -1,11 +1,12 @@
 <script lang="ts">
-	import { Check, X } from 'lucide-svelte';
 	import Container from '../ui/Container.svelte';
 	import Section from '../ui/Section.svelte';
-	import { aboutHeader, aboutBlocks, comparison } from '$lib/data/portfolio';
+	import { aboutHeader, aboutBlocks, type RichText } from '$lib/data/portfolio';
 	import { reveal } from '$lib/actions/reveal';
 
-	$: meIndex = comparison.columns.length - 1;
+	function parts(value: string | RichText): RichText {
+		return typeof value === 'string' ? [value] : value;
+	}
 </script>
 
 <Section id="about" className="border-t border-border">
@@ -23,7 +24,11 @@
 					<span class="font-mono text-2xl font-semibold text-accent sm:text-3xl">0{i + 1}</span>
 					<div>
 						<h3 class="text-xl font-semibold tracking-tight sm:text-2xl">{block.name}</h3>
-						<p class="mt-3 leading-relaxed text-muted">{block.description}</p>
+						<p class="mt-3 leading-relaxed text-muted">
+							{#each parts(block.description) as part}{#if typeof part === 'string'}{part}{:else}<strong
+										class="font-semibold text-ink">{part.strong}</strong
+									>{/if}{/each}
+						</p>
 					</div>
 				</div>
 			{/each}

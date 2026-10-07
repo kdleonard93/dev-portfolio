@@ -23,10 +23,10 @@
 				<span class="text-gradient-brand">Leonard</span>
 			</h1>
 
-			<p class="max-w-xl text-lg leading-relaxed text-muted sm:text-xl">
+			<!-- <p class="max-w-xl text-lg leading-relaxed text-muted sm:text-xl">
 				{hero.introBefore}<span class="font-semibold text-ink">{hero.introHighlight}</span
 				>{hero.introAfter}
-			</p>
+			</p> -->
 
 			<div class="flex flex-wrap gap-3">
 				<Button href={site.linkedin} external size="lg">
@@ -34,12 +34,6 @@
 					<ArrowRight class="h-4 w-4" />
 				</Button>
 				<Button href="#projects" variant="secondary" size="lg">View projects</Button>
-			</div>
-
-			<div class="flex flex-wrap gap-2 pt-2">
-				{#each hero.tags as tag}
-					<Badge>{tag}</Badge>
-				{/each}
 			</div>
 		</div>
 
