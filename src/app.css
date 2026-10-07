@@ -2,57 +2,120 @@
 @tailwind components;
 @tailwind utilities;
 
-html,
-body {
-	scroll-behavior: smooth;
+/*
+ * Neutral base + the original brand palette applied sparingly.
+ * accent   = rose   (primary: CTAs, links, focus)
+ * secondary = amber (used only as a highlight)
+ * tertiary  = teal  (used only as a highlight)
+ */
+:root {
+	--color-canvas: 253 253 248;
+	--color-surface: 238 239 233;
+	--color-surface-alt: 226 228 218;
+	--color-ink: 35 37 29;
+	--color-muted: 77 79 70;
+	--color-border: 191 193 183;
+	--color-accent: 190 18 60;
+	--color-accent-contrast: 253 253 248;
+	--color-secondary: 245 158 11;
+	--color-tertiary: 13 148 136;
+	--color-success: 46 125 50;
+	--color-error: 192 57 43;
+	color-scheme: light;
 }
 
-@font-face {
-	font-family: 'Quicksand';
-	src: url('/fonts/Quicksand.ttf');
-	font-display: swap;
+.dark {
+	--color-canvas: 27 29 24;
+	--color-surface: 36 38 31;
+	--color-surface-alt: 46 48 40;
+	--color-ink: 238 239 233;
+	--color-muted: 184 186 176;
+	--color-border: 60 62 54;
+	--color-accent: 251 113 133;
+	--color-accent-contrast: 27 29 24;
+	--color-secondary: 251 191 36;
+	--color-tertiary: 45 212 191;
+	--color-success: 87 179 92;
+	--color-error: 224 106 90;
+	color-scheme: dark;
 }
 
-@font-face {
-	font-family: 'Montserrat';
-	src: url('/fonts/Montserrat.ttf');
-	font-display: swap;
-}
-
-* {
-	font-family: 'Montserrat', sans-serif;
-}
-
-h1,
-h2,
-h3,
-.poppins {
-	font-family: 'Poppins', sans-serif;
-}
-
-@keyframes celebrate {
-	0% {
-		transform: scale(1);
-		opacity: 1;
+@layer base {
+	html {
+		scroll-behavior: smooth;
+		-webkit-text-size-adjust: 100%;
 	}
-	50% {
-		transform: scale(1.2);
-		opacity: 1;
+
+	body {
+		@apply bg-canvas text-ink antialiased;
+		font-feature-settings: 'ss01', 'cv01';
 	}
-	100% {
-		transform: scale(1);
+
+	::selection {
+		background: rgb(var(--color-accent) / 0.22);
+	}
+
+	:focus-visible {
+		outline: 2px solid rgb(var(--color-accent));
+		outline-offset: 2px;
+		border-radius: 3px;
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		html {
+			scroll-behavior: auto;
+		}
+		*,
+		*::before,
+		*::after {
+			animation-duration: 0.001ms !important;
+			animation-iteration-count: 1 !important;
+			transition-duration: 0.001ms !important;
+		}
+	}
+}
+
+@layer components {
+	.reveal {
 		opacity: 0;
+		transform: translateY(18px);
+		transition:
+			opacity 0.7s ease,
+			transform 0.7s ease;
 	}
-}
 
-.celebrate-animation {
-	animation: celebrate 1s ease-in-out forwards;
-}
+	.reveal.is-visible {
+		opacity: 1;
+		transform: none;
+	}
 
-.animate-gradient {
-	background-size: 200% 200%;
-}
+	.link-underline {
+		position: relative;
+	}
 
-.error {
-	color: red;
+	.link-underline::after {
+		content: '';
+		position: absolute;
+		left: 0;
+		bottom: -2px;
+		height: 1.5px;
+		width: 0;
+		background: rgb(var(--color-accent));
+		transition: width 0.3s ease;
+	}
+
+	.link-underline:hover::after {
+		width: 100%;
+	}
+
+	.text-gradient-brand {
+		background-image: linear-gradient(
+			to right,
+			rgb(var(--color-accent)),
+			rgb(var(--color-secondary))
+		);
+		-webkit-background-clip: text;
+		background-clip: text;
+		color: transparent;
+	}
 }
