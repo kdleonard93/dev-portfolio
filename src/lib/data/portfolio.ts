@@ -125,11 +125,11 @@ export const projectsHeader = {
 export const projects: Project[] = [
 	{
 		id: '1',
-		name: 'The Art Vault',
+		name: 'The Art Vault (in progress)',
 		icon: 'art',
 		description:
 			'A custom WordPress plugin that powers the admin for an art gallery: artwork inventory, prints and limited editions, collections, locations, exhibitions, and PDF inventory and certificate reports, built on top of WooCommerce.',
-		url: 'https://github.com/kdleonard93/artwork-manager'
+		note: 'Demo coming soon!'
 	},
 	{
 		id: '2',
@@ -137,6 +137,7 @@ export const projects: Project[] = [
 		icon: 'bot',
 		description:
 			'A minimal, local-first RAG (Retrieval-Augmented Generation) starter kit in TypeScript. Point it at documents, and get a chat app with grounded, cited answers running entirely on your machine.',
+
 		url: 'https://github.com/kdleonard93/rag-starter-kit'
 	},
 	{
