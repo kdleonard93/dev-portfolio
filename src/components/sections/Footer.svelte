@@ -25,7 +25,6 @@
 				class="mt-6 inline-flex items-center gap-2 rounded-full border border-border px-4 py-2 text-sm font-medium text-ink transition hover:border-ink"
 			>
 				{footer.connectLabel}
-				<span aria-hidden="true">&darr;</span>
 			</a>
 		</div>
 

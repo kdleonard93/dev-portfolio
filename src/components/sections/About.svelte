@@ -28,47 +28,5 @@
 				</div>
 			{/each}
 		</div>
-
-		<div class="mt-16" use:reveal>
-			<h3 class="text-2xl font-semibold tracking-tight">{aboutHeader.tableTitle}</h3>
-			<div class="mt-6 overflow-x-auto rounded-2xl border border-border bg-surface shadow-card">
-				<table class="w-full min-w-[540px] border-collapse text-sm">
-					<thead>
-						<tr class="border-b border-border">
-							<th class="sticky left-0 z-10 bg-surface p-4"></th>
-							{#each comparison.columns as column, i}
-								<th
-									class="whitespace-nowrap p-4 text-center font-semibold {i === meIndex
-										? 'bg-accent/10 text-ink'
-										: 'text-muted'}">{column}</th
-								>
-							{/each}
-						</tr>
-					</thead>
-					<tbody>
-						{#each comparison.rows as row}
-							<tr class="border-b border-border last:border-0">
-								<th
-									scope="row"
-									class="sticky left-0 z-10 whitespace-nowrap bg-surface p-4 text-left font-medium text-ink"
-								>
-									{row.label}
-								</th>
-								{#each row.values as value, i}
-									<td class="p-4 text-center {i === meIndex ? 'bg-accent/10' : ''}">
-										{#if value}
-											<Check class="mx-auto h-5 w-5 text-success" aria-label="Yes" />
-										{:else}
-											<X class="mx-auto h-5 w-5 text-error" aria-label="No" />
-										{/if}
-									</td>
-								{/each}
-							</tr>
-						{/each}
-					</tbody>
-				</table>
-			</div>
-			<p class="mt-3 text-xs italic text-muted sm:hidden">Scroll to see more &rarr;</p>
-		</div>
 	</Container>
 </Section>
