@@ -128,7 +128,7 @@ export const projects: Project[] = [
 		name: 'The Art Vault (in progress)',
 		icon: 'art',
 		description:
-			'A custom WordPress plugin that powers the admin for an art gallery: artwork inventory, prints and limited editions, collections, locations, exhibitions, and PDF inventory and certificate reports, built on top of WooCommerce.',
+			'A custom WordPress plugin that powers the admin for an art gallery: artwork inventory, prints and limited editions, collections, locations, exhibitions, and PDF inventory and certificate reports.',
 		note: 'Demo coming soon!'
 	},
 	{
