@@ -1,4 +1,4 @@
-export type ProjectIcon = 'bot' | 'paw' | 'ledger' | 'mail' | 'film' | 'game';
+export type ProjectIcon = 'art' | 'bot' | 'paw' | 'ledger' | 'mail' | 'film' | 'game';
 
 export type BrandName =
 	| 'substack'
@@ -125,6 +125,14 @@ export const projectsHeader = {
 export const projects: Project[] = [
 	{
 		id: '1',
+		name: 'The Art Vault',
+		icon: 'art',
+		description:
+			'A custom WordPress plugin that powers the admin for an art gallery: artwork inventory, prints and limited editions, collections, locations, exhibitions, and PDF inventory and certificate reports, built on top of WooCommerce.',
+		url: 'https://github.com/kdleonard93/artwork-manager'
+	},
+	{
+		id: '2',
 		name: 'RAG Starter Kit',
 		icon: 'bot',
 		description:
@@ -132,7 +140,7 @@ export const projects: Project[] = [
 		url: 'https://github.com/kdleonard93/rag-starter-kit'
 	},
 	{
-		id: '2',
+		id: '3',
 		name: 'Creatures of Habit',
 		icon: 'paw',
 		description:
@@ -141,7 +149,7 @@ export const projects: Project[] = [
 		url: 'https://creatures-of-habit-production.up.railway.app/'
 	},
 	{
-		id: '3',
+		id: '4',
 		name: 'Leo Ledger',
 		icon: 'ledger',
 		description:
@@ -149,7 +157,7 @@ export const projects: Project[] = [
 		url: 'https://github.com/kdleonard93/Leo_Ledger'
 	},
 	{
-		id: '4',
+		id: '5',
 		name: 'Automated Email Sender',
 		icon: 'mail',
 		description:
@@ -157,19 +165,12 @@ export const projects: Project[] = [
 		url: 'https://github.com/kdleonard93/automated_email_sender'
 	},
 	{
-		id: '5',
+		id: '6',
 		name: 'Film Fan',
 		icon: 'film',
 		description:
 			'Film Fan is sleek web application built using Svelte and Django, designed for movie enthusiasts. This app allows users to create personalized accounts, build, and manage their film lists with comprehensive CRUD (Create, Read, Update, Delete) functionalities.(new features to come)',
 		url: 'https://github.com/kdleonard93/film-fan'
-	},
-	{
-		id: '6',
-		name: 'Pong Game',
-		icon: 'game',
-		description: 'Try and get a high score in this all time classic!',
-		url: 'https://github.com/kdleonard93/100-Days-Of-Code_Python/tree/main/day-22'
 	}
 ];
 

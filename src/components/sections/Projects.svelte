@@ -8,7 +8,8 @@
 		CircleDollarSign,
 		Mail,
 		Clapperboard,
-		Gamepad2
+		Gamepad2,
+		Frame
 	} from 'lucide-svelte';
 	import Container from '../ui/Container.svelte';
 	import Section from '../ui/Section.svelte';
@@ -17,6 +18,7 @@
 	import { reveal } from '$lib/actions/reveal';
 
 	const icons: Record<ProjectIcon, ComponentType> = {
+		art: Frame,
 		bot: Bot,
 		paw: PawPrint,
 		ledger: CircleDollarSign,
